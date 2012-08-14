@@ -11,7 +11,7 @@
         <appender-ref ref="CA" />
     </root>
 
-    <logger name="org.springframework.jdbc">
+    <logger name="org.springframework.web">
         <level value="DEBUG" />
         <appender-ref ref="CA" />
     </logger>

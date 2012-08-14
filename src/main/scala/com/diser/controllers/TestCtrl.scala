@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired
 import com.diser.dao.JdbcDao
 import org.springframework.web.bind.annotation.{RequestMapping, Mapping}
 import javax.servlet.http.{HttpServletResponse, HttpServletRequest}
+import org.springframework.web.portlet.ModelAndView
 
 /**
  * Created with IntelliJ IDEA.
@@ -21,7 +22,7 @@ class TestCtrl {
 	private val jdbcDao:JdbcDao = null
 
 	@RequestMapping(Array("/test"))
-	def test(request:HttpServletRequest, response:HttpServletResponse): String = {
+	def test(request:HttpServletRequest, response:HttpServletResponse) = {
 		"test"
 	}
 

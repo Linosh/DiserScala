@@ -33,7 +33,7 @@
     </bean>
 
     <bean id="applicationProperties" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-        <property name="location" value="file:/WEB-INF/resources/application.properties"/>
+        <property name="location" value="/WEB-INF/resources/application.properties"/>
     </bean>
 
 
