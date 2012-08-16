@@ -6,4 +6,30 @@
     <definition name="test"
                 template="/jsps/tmp/test.jsp">
     </definition>
+
+    <definition name="basePage" template="/jsps/common/basePage.jsp">
+        <put-attribute name="header" type="template" value="/jsps/common/header.jsp"/>
+        <put-attribute name="body" type="template" value="/jsps/common/blankPage.jsp"/>
+        <put-attribute name="footer" type="template" value="/jsps/common/footer.jsp"/>
+        <put-attribute name="title" type="string" value="Base Page"/>
+    </definition>
+
+    <definition name="main" extends="basePage">
+        <put-attribute name="title" type="string" value="Main Page" />
+        <put-attribute name="body" type="template" value="/jsps/main.jsp" />
+    </definition>
+
+
+    <!-- START Market Services Definitions-->
+    <definition name="marketServices" extends="basePage">
+        <put-attribute name="title" type="string" value="Market Services" />
+        <put-attribute name="body" type="template" value="/jsps/marketServices/list.jsp" />
+    </definition>
+
+    <definition name="marketServicesList" extends="marketServices">
+        <put-attribute name="body" type="template" value="/jsps/marketServices/list.jsp" />
+    </definition>
+    <!-- END Market Services Definitions-->
+
+
 </tiles-definitions>

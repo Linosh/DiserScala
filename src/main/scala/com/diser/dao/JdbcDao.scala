@@ -1,15 +1,16 @@
 package com.diser.dao
 
 import org.springframework.jdbc.core.support.JdbcDaoSupport
-
-/**
- * Created with IntelliJ IDEA.
- * User: dy
- * Date: 6/26/12
- * Time: 1:36 AM
- * To change this template use File | Settings | File Templates.
- */
+import com.diser.entities.MarketService
+import org.springframework.jdbc.core.RowMapper
+import java.sql.ResultSet
 
 class JdbcDao extends JdbcDaoSupport{
-
+	 def getAllMarketServices : java.util.Collection[MarketService] = {
+	    getJdbcTemplate.query[MarketService]("select * from DISER.MARKET_SERVICE", new RowMapper[MarketService] {
+		    def mapRow(p1: ResultSet, p2: Int): MarketService = {
+			    new MarketService(p1 getInt 1, p1 getString 2, p1 getString 3)
+		    }
+	    })
+	 }
 }

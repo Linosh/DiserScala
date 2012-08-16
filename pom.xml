@@ -199,6 +199,15 @@
             <version>2.2.8</version>
         </dependency>
 
+        <!-- Oracle -->
+        <!--<dependency>
+            <groupId>oracle</groupId>
+            <artifactId>oracle</artifactId>
+            <version>14</version>
+            <scope>system</scope>
+            <systemPath>/usr/lib/oracle/xe/app/oracle/product/10.2.0/server/jdbc/lib/ojdbc14.jar</systemPath>
+        </dependency>-->
+
         <!-- Commons -->
         <dependency>
             <groupId>commons-dbcp</groupId>
