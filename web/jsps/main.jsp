@@ -1,11 +1,11 @@
 <div>
- <a href="<%=request.getContextPath()%>/main/viewMarketServices">View Market Services</a>
+ <a href="<%=request.getContextPath()%>/marketServices/viewMarketServices">View Market Services</a>
 </div>
 <br/>
 <div>
-   <a href="<%=request.getContextPath()%>/main/viewTelecomServices">View Telecom Services</a>
+   <a href="<%=request.getContextPath()%>/telecomServices/viewTelecomServices">View Telecom Services</a>
 </div>
 <br/>
 <div>
-   <a href=<%=request.getContextPath()%>"/main/viewMobileOperators">View Mobile Operators</a>
+   <a href=<%=request.getContextPath()%>"/mobileOperators/viewMobileOperators">View Mobile Operators</a>
 </div>

@@ -29,6 +29,10 @@
     <definition name="marketServicesList" extends="marketServices">
         <put-attribute name="body" type="template" value="/jsps/marketServices/list.jsp" />
     </definition>
+
+    <definition name="marketServicesNew" extends="marketServices">
+        <put-attribute name="body" type="template" value="/jsps/marketServices/new.jsp" />
+    </definition>
     <!-- END Market Services Definitions-->
 
 

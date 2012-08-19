@@ -9,6 +9,8 @@ import com.diser.commons.Constants
 
 class MarketService(var id:Int, var name:String, var description:String) extends Constants{
 
+	def this() = this(-1, null, null)
+
 	def setId(id:Int) = this.id = id
 	def getId = id
 
