@@ -9,8 +9,8 @@
 
     <h3 class="headerbar">Mapping</h3>
     <ul>
-        <li><a href="#" >Market -> Telecom Services</a></li>
-        <li><a href="#">Telecom Services ->  Operator</a></li>
+        <li><a href="<%=request.getContextPath()%>/mapping/market2TelecomServs" >Market -> Telecom Services</a></li>
+        <li><a href="<%=request.getContextPath()%>/mapping/telecomServ2Operator">Telecom Services ->  Operator</a></li>
     </ul>
 
 </div>

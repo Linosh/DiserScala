@@ -68,5 +68,16 @@
     </definition>
     <!-- END Mobile Operators Definitions-->
 
+    <!-- START Mapping Definitions-->
+    <definition name="telecomServ2Operator" extends="basePage">
+        <put-attribute name="title" type="string" value="Telecom Services -> Operators" />
+        <put-attribute name="body" type="template" value="/jsps/mapping/telecom2operators.jsp" />
+    </definition>
+
+    <definition name="market2TelecomServs" extends="basePage">
+        <put-attribute name="title" type="string" value="Market -> Telecom Services" />
+        <put-attribute name="body" type="template" value="/jsps/mapping/market2telecom.jsp" />
+    </definition>
+    <!-- END Mapping Definitions-->
 
 </tiles-definitions>
