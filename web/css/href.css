@@ -31,6 +31,7 @@ a.ovalbutton:hover span{ /* Hover state CSS */
 .buttonwrapper{ /* Container you can use to surround a CSS button to clear float */
     overflow: hidden; /*See: http://www.quirksmode.org/css/clearing.html */
     width: 100%;
+    padding: 0 0 0 430px;
 }
 
 a.editLink {
@@ -47,4 +48,13 @@ a.deleteLink {
     width : 25px; /* Width of button background height */
     display: block;
     /*float: right;*/
+}
+
+.sideMenuLink {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-size: 13px;
+}
+
+h1.sideMenuLink {
+    font-size: 26px;
 }

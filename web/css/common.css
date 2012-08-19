@@ -1,7 +1,8 @@
 #bodyDiv {
-    width: 90%;
+    width: 84%;
     height: 80%;
     float: right;
+    padding: 15px;
 }
 
 #leftMenuDiv {
