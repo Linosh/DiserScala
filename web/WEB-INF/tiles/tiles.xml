@@ -3,22 +3,13 @@
         "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
         "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
 <tiles-definitions>
-    <definition name="test"
-                template="/jsps/tmp/test.jsp">
-    </definition>
-
     <definition name="basePage" template="/jsps/common/basePage.jsp">
         <put-attribute name="header" type="template" value="/jsps/common/header.jsp"/>
         <put-attribute name="body" type="template" value="/jsps/common/blankPage.jsp"/>
+        <put-attribute name="leftMenu" type="template" value="/jsps/common/leftMenu.jsp"/>
         <put-attribute name="footer" type="template" value="/jsps/common/footer.jsp"/>
         <put-attribute name="title" type="string" value="Base Page"/>
     </definition>
-
-    <definition name="main" extends="basePage">
-        <put-attribute name="title" type="string" value="Main Page" />
-        <put-attribute name="body" type="template" value="/jsps/main.jsp" />
-    </definition>
-
 
     <!-- START Market Services Definitions-->
     <definition name="marketServices" extends="basePage">
@@ -33,7 +24,49 @@
     <definition name="marketServicesNew" extends="marketServices">
         <put-attribute name="body" type="template" value="/jsps/marketServices/new.jsp" />
     </definition>
+
+    <definition name="editMarketServices" extends="marketServices">
+        <put-attribute name="body" type="template" value="/jsps/marketServices/edit.jsp" />
+    </definition>
     <!-- END Market Services Definitions-->
+
+    <!-- START Telecom Services Definitions-->
+    <definition name="telecomServices" extends="basePage">
+        <put-attribute name="title" type="string" value="Telecom Services" />
+        <put-attribute name="body" type="template" value="/jsps/telecomServices/list.jsp" />
+    </definition>
+
+    <definition name="telecomServicesList" extends="telecomServices">
+        <put-attribute name="body" type="template" value="/jsps/telecomServices/list.jsp" />
+    </definition>
+
+    <definition name="telecomServicesNew" extends="telecomServices">
+        <put-attribute name="body" type="template" value="/jsps/telecomServices/new.jsp" />
+    </definition>
+
+    <definition name="editTelecomServices" extends="telecomServices">
+        <put-attribute name="body" type="template" value="/jsps/telecomServices/edit.jsp" />
+    </definition>
+    <!-- END Telecom Services Definitions-->
+
+    <!-- START Mobile Operators Definitions-->
+    <definition name="mobileOperators" extends="basePage">
+        <put-attribute name="title" type="string" value="Telecom Services" />
+        <put-attribute name="body" type="template" value="/jsps/mobileOperators/list.jsp" />
+    </definition>
+
+    <definition name="mobileOperatorsList" extends="mobileOperators">
+        <put-attribute name="body" type="template" value="/jsps/mobileOperators/list.jsp" />
+    </definition>
+
+    <definition name="mobileOperatorsNew" extends="mobileOperators">
+        <put-attribute name="body" type="template" value="/jsps/mobileOperators/new.jsp" />
+    </definition>
+
+    <definition name="editMobileOperators" extends="mobileOperators">
+        <put-attribute name="body" type="template" value="/jsps/mobileOperators/edit.jsp" />
+    </definition>
+    <!-- END Mobile Operators Definitions-->
 
 
 </tiles-definitions>

@@ -1,7 +1,7 @@
 package com.diser.controllers
 
 import org.springframework.stereotype.Controller
-import org.springframework.web.bind.annotation.{ModelAttribute, RequestMapping}
+import org.springframework.web.bind.annotation.{PathVariable, ModelAttribute, RequestMapping}
 import org.springframework.ui.Model
 import org.springframework.beans.factory.annotation.Autowired
 import com.diser.dao.JdbcDao
@@ -31,9 +31,26 @@ class MarketServicesController {
 		"redirect:/marketServices/viewMarketServices"
 	}
 
-	@RequestMapping(Array("/creationView"))
-	def creationView(@ModelAttribute("service") service: MarketService):String = {
-		"marketServicesNew"
+	@RequestMapping(Array("/rm/{id}"))
+	def rmMarketServices(@PathVariable("id") id:String):String = {
+		dao.deleteMarketService(id)
+		"redirect:/marketServices/viewMarketServices"
 	}
+
+	@RequestMapping(Array("/edit/{id}"))
+	def gotoEditMarketServices(model:Model, @PathVariable("id") id:String):String = {
+		model.addAttribute("item", dao.getMarketServiceById(id).get(0))
+		"editMarketServices"
+	}
+
+	@RequestMapping(Array("/save"))
+	def saveMarketServices(@ModelAttribute("service") service: MarketService):String = {
+		dao.editMarketService(service)
+		"redirect:/marketServices/viewMarketServices"
+	}
+
+
+	@RequestMapping(Array("/creationView"))
+	def creationView = "marketServicesNew"
 
 }

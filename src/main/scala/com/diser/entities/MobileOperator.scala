@@ -7,11 +7,9 @@ import com.diser.commons.Constants
  * Date: 8/16/12
  */
 
-class MobileOperator extends Constants{
+class MobileOperator(var id:Int, var name:String, var description:String) extends Constants{
 
-	private var id:Int = -1
-	private var name:String = Defaults.EMPTY_STRING
-	private var description:String = Defaults.EMPTY_STRING
+	def this() = this(-1, null, null)
 
 	def setId(id:Int) = this.id = id
 	def getId = id

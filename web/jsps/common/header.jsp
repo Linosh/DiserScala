@@ -1,16 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: dy
-  Date: 8/16/12
-  Time: 12:21 AM
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title></title>
-</head>
-<body>
-
-</body>
-</html>
+<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/css/href.css" />
+<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/css/common.css" />
+<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/css/tables.css" />

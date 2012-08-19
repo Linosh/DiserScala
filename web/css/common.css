@@ -1,0 +1,17 @@
+#bodyDiv {
+    width: 90%;
+    height: 80%;
+    float: right;
+}
+
+#leftMenuDiv {
+    width: 10%;
+    height: 80%;
+    float: left;
+}
+
+#footerDiv {
+    width: 100%;
+    height: 20%;
+    margin-bottom: 80%;
+}

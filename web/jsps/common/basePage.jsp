@@ -2,11 +2,19 @@
 <%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles" %>
 <html>
 <head>
-    <title> <tiles:insertAttribute name="title"/> </title>
+    <title><tiles:insertAttribute name="title"/></title>
+    <tiles:insertAttribute name="header"/>
 </head>
 <body>
-<tiles:insertAttribute name="header"/>
-<tiles:insertAttribute name="body"/>
-<tiles:insertAttribute name="footer"/>
+<div id="bodyDiv">
+    <tiles:insertAttribute name="body"/>
+</div>
+
+<div id="leftMenuDiv">
+    <tiles:insertAttribute name="leftMenu"/>
+</div>
+<div id="footerDiv">
+    <tiles:insertAttribute name="footer"/>
+</div>
 </body>
 </html>

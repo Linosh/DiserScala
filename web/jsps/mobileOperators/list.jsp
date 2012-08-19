@@ -17,10 +17,10 @@
             <td>${service.name}</td>
             <td>${service.description}</td>
             <td width="25px">
-                <a class="editLink" href="<%=request.getContextPath()%>/marketServices/edit/${service.id}"/>
+                <a class="editLink" href="<%=request.getContextPath()%>/mobileOperators/edit/${service.id}"/>
             </td>
             <td width="25px">
-                <a class="deleteLink" href="<%=request.getContextPath()%>/marketServices/rm/${service.id}" onclick="return confirm('Do you really want to delete item?')"/>
+                <a class="deleteLink" href="<%=request.getContextPath()%>/mobileOperators/rm/${service.id}" onclick="return confirm('Do you really want to delete item?')"/>
             </td>
         </tr>
     </c:forEach>
@@ -28,5 +28,5 @@
 </table>
 
 <div class="buttonwrapper">
-    <a class="ovalbutton" href="<%=request.getContextPath()%>/marketServices/creationView"><span>New Service</span></a>
+    <a class="ovalbutton" href="<%=request.getContextPath()%>/mobileOperators/creationView"><span>New Operator</span></a>
 </div>

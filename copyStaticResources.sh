@@ -1,0 +1,1 @@
+cp -R -u /home/dy/Development/Projects/Diser/DiserScala/web/* /home/dy/Development/apache-tomcat-6.0.20/webapps/diser/
