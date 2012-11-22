@@ -126,4 +126,24 @@ class JdbcDao extends JdbcDaoSupport {
 				}
 			})
 	}
+
+	def addNewTelecomServices2Operators(operator: String, service: String) {
+		if (getJdbcTemplate.queryForInt("select count(1) from DISER.MOPER_TSERV where MOPER_ID=" + operator + " and TSERV_ID=" + service) == 0) {
+			getJdbcTemplate.update("insert into DISER.MOPER_TSERV(MOPER_ID, TSERV_ID) values (" + operator + "," + service + ")")
+		}
+	}
+
+	def addNewTServices2MServices(tService: String, mService: String) {
+		if (getJdbcTemplate.queryForInt("select count(1) from DISER.TSERV_MSERV where MSERV_ID=" + mService + " and TSERV_ID=" + tService) == 0) {
+			getJdbcTemplate.update("insert into DISER.TSERV_MSERV(MSERV_ID, TSERV_ID) values (" + tService + "," + mService + ")")
+		}
+	}
+
+	def deleteTelecomServices2Operators(operator: String, service: String) {
+		getJdbcTemplate.update("delete from DISER.MOPER_TSERV where MOPER_ID=" + operator + " and TSERV_ID=" + service)
+	}
+
+	def deleteTServices2MServices(tService: String, mService: String) {
+		getJdbcTemplate.update("delete from DISER.TSERV_MSERV where MSERV_ID=" + mService + " and TSERV_ID=" + tService)
+	}
 }

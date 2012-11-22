@@ -5,12 +5,12 @@ package com.diser.entities
  * Date: 8/20/12
  */
 
-class TService2MOPerator(var tSrv: TelecomService, var operator: MobileOperator) {
+class TService2MOPerator(var tsrv: TelecomService, var operator: MobileOperator) {
 
-	def setTSrv(tSrv:TelecomService) = this.tSrv = tSrv
+	def setTsrv(tsrv:TelecomService) = this.tsrv = tsrv
 	def setOperator(operator: MobileOperator) = this.operator = operator
 
-	def getTSrv = tSrv
+	def getTsrv = tsrv
 	def getOperator = operator
 
 }

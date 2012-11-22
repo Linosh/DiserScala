@@ -15,4 +15,9 @@
         <level value="DEBUG" />
         <appender-ref ref="CA" />
     </logger>
+
+    <logger name="org.springframework.jdbc">
+        <level value="DEBUG" />
+        <appender-ref ref="CA" />
+    </logger>
 </log4j:configuration>
